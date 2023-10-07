@@ -6,11 +6,10 @@ def extract_text_from_pdf(file_path):
     This function takes in a file path of a PDF and returns the extracted text from the PDF.
     """
     with open(file_path, 'rb') as pdf_file:
-        pdf_reader = PyPDF2.PdfFileReader(pdf_file)
+        pdf_reader = PyPDF2.PdfReader(pdf_file)
         text = ''
-        for page in range(pdf_reader.getNumPages()):
-            page_obj = pdf_reader.getPage(page)
-            text += page_obj.extractText()
+        for page in pdf_reader.pages:
+            text += page.extract_text()
         return text
 
 def extract_github_links(text):
@@ -33,3 +32,11 @@ def extract_key_skill_tags(text):
     """
     key_skill_tags = re.findall(r'\b(?:python|java|c\+\+|javascript|html|css)\b', text, re.IGNORECASE)
     return key_skill_tags
+
+def main():
+    path = r'C:\Users\dell\Rishav\ResumeEval\HTF23-Team-107\data\data\data\ACCOUNTANT\10554236.pdf'
+    
+    print(extract_text_from_pdf(path))
+    
+if __name__ == '__main__':
+    main()
