@@ -153,9 +153,9 @@ def assess_github_coding_proficiency(username, github_token=None):
                 'languages': list(languages)
             }
         else:
-            return {'error': 'GitHub API request failed. Check the status code and response content.'}
+            raise Exception('GitHub API request failed. Check the status code and response content.')
     except Exception as e:
-        return {'error': f'An error occurred: {str(e)}'}
+        raise e
 
 def main():
     path = r'C:\Users\dell\Rishav\ResumeEval\HTF23-Team-107\data\data\data\ACCOUNTANT\10554236.pdf'

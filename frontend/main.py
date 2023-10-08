@@ -3,8 +3,31 @@ import streamlit as st
 import os
 
 def main():
-    st.title("PDF Uploader")
-    job_title = st.selectbox("Select the job you're applying for", ["Software Dev", "Data-Sci", "Job 3"])
+    st.title("Resume Uploader")
+    job_roles = ['Data Science', 'HR', 'Advocate', 'Arts', 'Web Designing', 'Mechanical Engineer', 'Sales', 'Health and fitness', 'Civil Engineer', 'Java Developer', 'Business Analyst', 'SAP Developer', 'Automation Testing', 'Electrical Engineering', 'Operations Manager', 'Python Developer', 'DevOps Engineer', 'Network Security Engineer', 'PMO', 'Database', 'Hadoop', 'ETL Developer', 'DotNet Developer', 'Blockchain', 'Testing']
+    job_title = st.selectbox(" Select the job you're applying for", job_roles)
+    
+    
+    # github
+    github_handle = st.text_input("# Enter your GitHub handle")
+    try:
+        info = assess_github_coding_proficiency(github_handle)
+        
+        st.write(info)
+    except Exception as e:
+        st.write(":red[User not found]")
+    
+    # codeforces
+    codeforces_handle = st.text_input("Enter your Codeforces handle")
+    info= get_codeforces_user_info(None, codeforces_handle)
+    try:
+        
+        st.image(info['avatar'])
+        st.write(info)
+    except Exception as e:
+        st.write(":red[User not found]")
+    
+    
     uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
     if uploaded_file is not None:
         st.write("You selected the following file:")
