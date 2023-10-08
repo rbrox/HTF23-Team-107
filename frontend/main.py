@@ -10,11 +10,13 @@ def main():
         st.write(uploaded_file)
         if not os.path.exists('./data/New_Sent'):
             os.makedirs('./data/New_Sent')
-        path = './data/New_Sent/' + uploaded_file.name
-        with open(path, 'wb') as f:
+        file_path = './data/New_Sent/' + uploaded_file.name
+        with open(file_path, 'wb') as f:
             f.write(uploaded_file.getbuffer())
+        resume_data = analyze_resume(file_path)
+        st.write(resume_data)
 
-    results = analyze_resume(path)
+    results = analyze_resume()
     st.write(results)
 
 if __name__ == "__main__":
