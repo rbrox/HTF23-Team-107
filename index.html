@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--header-->
+    <header>
+       <a href="index.html" class="logo">reZOOM.com</a>
+       <div class="bx menu" id="menu-icon"></div>
+       <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li ><a href="#upload">Upload</a>
+        <li><a href="login.html">Log in</a></li>
+       </ul>
+       <div id="p2" class="section">
+    </header>
+
+
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Standout.</h1>
+            <p>Get Noticed, Get Hired,Get Started</p>
+            <button class="start-button" onclick="window.location.href='login.html';">Try Now</button>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="container" id="p2">
+        <div class="text">
+            <h2>Upload Your Resume Here</h2>
+            <h4>Don't Just Apply, Shine: Let Your Resume Steal the Spotlight!</h4>
+        </div>
+        <script>
+        function scrollToSection(container) {
+            const section = document.getElementById(container);
+            if (container) {
+                container.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        </script>
+        <div class="dropdown">
+            <form>  
+                <label> select job</label>  
+                <select>  
+                <option value = "ds"> Data Science
+                </option>  
+                <option value = "HR"> HR   
+                </option>  
+                <option value = "Advocate"> Advocate  
+                </option>  
+                <option value = "react native developer"> Arts 
+                </option>  
+                <option value = ""> Web designing 
+                </option>  
+                <option value = "Mercedes"> Mechanical engineer
+                </option>  
+                <option value = "Audi"> Sales
+                </option>  
+                <option value = "Skoda"> Health and Fitness 
+                </option>  
+                <option value = "BMW"> Civil engineer   
+                </option>  
+                <option value = "Mercedes"> Java developer  
+                </option>  
+                <option value = "Audi"> Buisness analyst
+                </option>  
+                <option value = "Skoda"> SAP developer
+                </option>  
+                <option value = "BMW"> Automation testing  
+                </option>  
+                <option value = "Mercedes"> Operations managers  
+                </option>  
+                <option value = "Audi"> Electrical engineer  
+                </option>  
+                <option value = "Skoda"> Python developer 
+                </option>  
+                <option value = "BMW"> DevOPs engineer   
+                </option>  
+                <option value = "Mercedes"> Network Security engineer   
+                </option>  
+                <option value = "Audi"> PMO  
+                </option>  
+                <option value = "Skoda"> Data Base  
+                </option>  
+                <option value = "ds"> Hadoop
+                </option> 
+                <option value = "ds"> ETL developer
+                </option> 
+                <option value = "ds"> dotnet developer
+                </option> 
+                <option value = "ds"> Block Chain
+                </option> 
+                <option value = "ds"> Testing
+                </option> 
+                </select> 
+                </form>  
+            </div>
+
+        <div class="upload-content">
+            <form action="upload-handler.php" method="post" enctype="multipart/form-data">
+                <br>
+                <div>
+                <p>Here you can upload your resume in various formats:</p>
+                <input type="file" name="resumeFile" id="resumeFile" accept=".docx, .pdf">
+                <br>
+               <div class="btn">
+                <button type="submit">Upload</button>
+                </div>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <script type="text/javascript" src="js/script.js"></script>
+
+
+    <!--footer-->
+    <section id="contact">
+        <div class="footer">
+            <div class="main">
+                <div class="list">
+                    <ul>
+                        <h4>connect</h4>
+                       <li><a href="#"><i class="bx bxl-facebook"></i></a></li> 
+                       <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                        <li> <a href="#"><i class='bx bxl-twitch'></i></a></li>
+                        <li> <a href="#"><i class='bx bxl-linkedin-square'></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms&Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Tour</a></li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="#">MGIT HYD Gandipet</a></li>
+                        <li><a href="#">Hyderabad ,Telangana</a></li>
+                        <li><a href="#">+91-9346315818</a></li>
+                        <li><a href="#">support@rezoom.in</a></li>
+                        <li><a href="#">+91-9346315817</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="end-text">
+           <p>Copyright@2022 All rights reserved | Made by Team-107</p>
+        </div>
+    </section>
+</body>
+</html>
