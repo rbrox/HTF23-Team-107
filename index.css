@@ -136,7 +136,7 @@ header.sticky{
 }
 
 .container{
-    background-image: url(/img.jpg/p2.jpg);
+    background-image: url(p2.jpg);
     background-position: center;
     background-size: cover;
     
