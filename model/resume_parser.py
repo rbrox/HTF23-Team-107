@@ -36,8 +36,10 @@ def extract_key_skill_tags(text):
 def main():
     path = r'C:\Users\dell\Rishav\ResumeEval\HTF23-Team-107\data\data\data\ACCOUNTANT\10554236.pdf'
     
-    print(extract_text_from_pdf(path))
-    
+    #print(extract_text_from_pdf(path))
+    handle = 'rishavsci'
+    info = get_codeforces_user_info(None, handle)
+    print(info)
     
 import requests
 
@@ -72,22 +74,7 @@ def get_codeforces_user_info(api_key, user_handle):
     except Exception as e:
         return {'error': f'An error occurred: {str(e)}'}
 
-# Usage example:
-# Replace 'your_api_key' with your actual Codeforces API key (if required)
-api_key = 'your_api_key'
 
-# Replace 'your_user_handle' with the Codeforces handle (username) of the user you want to query
-user_handle = 'your_user_handle'
-
-user_info = get_codeforces_user_info(api_key, user_handle)
-
-if 'error' in user_info:
-    print(f"Error: {user_info['error']}")
-else:
-    print("User Info:")
-    print(f"Handle: {user_info['handle']}")
-    print(f"Rating: {user_info['rating']}")
-    print(f"Max Rating: {user_info['maxRating']}")
 
     
 if __name__ == '__main__':
