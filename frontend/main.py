@@ -4,6 +4,7 @@ import os
 
 def main():
     st.title("PDF Uploader")
+    job_title = st.selectbox("Select the job you're applying for", ["Software Dev", "Data-Sci", "Job 3"])
     uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
     if uploaded_file is not None:
         st.write("You selected the following file:")
